@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+# Text Expander Components
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A Single React component named TextExpander that is used to expand and collapse text
 
-## Available Scripts
+### App Component:
 
-In the project directory, you can run:
+This is the main component that renders the TextExpander component multiple times with different props.
+It imports useState hook from React and a CSS file named index.css.
 
-### `npm start`
+### TextExpander Component:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This component uses the useState hook to manage the state of text expansion (isExpanded).
+The text content is either fully shown or truncated based on the isExpanded state.
+A button is provided to toggle the state of isExpanded, changing between expanded and collapsed states.
+This compoent takes several props:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **collapsedNumWords:** Number of words to show when the text is collapsed (default is 10).
+- **expandButtonText:** Text for the button to expand the text (default is "Show More").
+- **collapseButtonText:** Text for the button to collapse the text (default is "Show Less").
+- **buttonColor:** Color for the button (default is "#1f09cd").
+- **expanded:** Initial state of the text (default is false).
+- **className:** CSS class name for styling purposes (default is false).
+- **children:** The text content to be expanded or collapsed.
 
-### `npm test`
+### Usage:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The TextExpander component is used multiple times within the App component.
+Each usage of TextExpander provides different props to customize its behavior and appearance.
